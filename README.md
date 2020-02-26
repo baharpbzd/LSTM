@@ -1,4 +1,6 @@
 # (LSTM) This code uses the OPF data to train an LSTM neural network 
+
+# Import required libraries
 from math import sqrt
 from numpy import concatenate
 from matplotlib import pyplot
