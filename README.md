@@ -1,5 +1,4 @@
-# LSTM
-This code uses the OPF data to train an LSTM neural network 
+# (LSTM) This code uses the OPF data to train an LSTM neural network 
 from math import sqrt
 from numpy import concatenate
 from matplotlib import pyplot
@@ -40,9 +39,11 @@ def series_to_supervised(data, n_in=1, n_out=1, dropnan=True):
 # load dataset (The dataset is a CSV file that is actually the output of traditional Optimal Power Flow)
 dataset = read_csv('bus2.csv', header=0, index_col=0)
 values = dataset.values
+
 # normalize features
 scaler = MinMaxScaler(feature_range=(0, 1))
 scaled = scaler.fit_transform(values)
+
 # frame as supervised learning
 reframed = series_to_supervised(scaled, 1, 1)
  
