@@ -25,7 +25,7 @@ scaled = scaler.fit_transform(values)
 # frame as supervised learning
 reframed = series_to_supervised(scaled, 1, 1)
  
-# split into train and test sets (In this file the training set size is equal to 31*24*4)
+# split into train and test sets (In this file the training set size is equal to 31x24x4)
 values = reframed.values
 n_train_hours = 2976
 train = values[:n_train_hours, :]
